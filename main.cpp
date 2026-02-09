@@ -1,23 +1,26 @@
 #include <iostream>
 
-using std::cout
-using std::cin
+using std::cout;
+using std::cin;
+using std::endl;
 // function main begins program execution
 int main()
 {
-    int number1;
-    int number2;
-    int output;
+    cout << "This program calculates the product of 3 integers";
 
-    std::cout << "Input first number: ";
-    std::cin >> number1;
-    std::cout << "\nInput second number: ";
-    std::cin >> number2;
+    int x;
+    int y;
+    int z;
 
-    output = number1 + number2;
+    cout << "\nEnter three integers: ";
+    cin >> x >> y >> z;
 
-    std::cout << "\nSum is: " << output << std::endl;
+    int result;
+    result = x * y * z;
 
+    cout << "The product is " << result << endl;
+
+    /*
     int c, thisIsAVariable, q76354, number, age;
 
     std::cout << "Input an integer: ";
@@ -30,7 +33,9 @@ int main()
     std::cout << "\nThis is a C++\n program";
     std::cout << "\nThis \nis \na \nC++\n program";
     std::cout << "\tThis \tis \ta \tC++\t program";
+    */
 
     return 0;
+
 
 }

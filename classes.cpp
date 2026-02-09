@@ -1,5 +1,4 @@
 // My introduction to C++ classes and functions
-
 #include <iostream>
 using std::cout;
 using std::cin;
@@ -13,11 +12,22 @@ using std::getline;
 class GradeBook
 {
 public:
-    // function that displays welcome message
-    void displayMessage( string courseName )
+    void setCourseName( string name )
     {
-        cout << "Welcome to grade book for\n" << courseName << "!" << endl;
+        courseName = name;
     }
+
+    string getCourseName()
+    {
+        return courseName;
+    }
+    // function that displays welcome message
+    void displayMessage()
+    {
+        cout << "Welcome to grade book" << endl;
+    }
+private:
+        string courseName;
 };
 
 int main()
@@ -29,6 +39,8 @@ int main()
     getline( cin, nameOfCourse );
     cout << endl;
 
-    myGradeBook.displayMessage( nameOfCourse );
+    myGradeBook.setCourseName( nameOfCourse );
+    string displayCourse = myGradeBook.getCourseName();
+    cout << displayCourse << endl;
     return 0;
 }
